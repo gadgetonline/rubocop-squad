@@ -9,7 +9,8 @@ require:
 
 AllCops:
   Exclude:
-    - Brewfile
+    - 'Brewfile'
+    - 'Dockerfile.*'
     - 'Procfile.*'
     - 'bin/**/*'
     - 'config.ru'
