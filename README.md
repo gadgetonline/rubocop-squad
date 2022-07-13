@@ -1,44 +1,58 @@
-# Rubocop::Perchwell
+# The rubocop-perchwell Gem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/perchwell`. To experiment with that code, run `bin/console` for an interactive prompt.
+The `rubocop-perchwell` gem provides a baseline _Rubocop_ configuration for
+all Ruby development at Perchwell. It defines rules in its _.rubocop.yml_ and
+wraps its dependencies, other Rubocop gems, into a single package.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Installation in any Ruby project is a snap. You can add the `rubocop-perchwell` Rubocop configuration
+and its tools with three lines of code.
+
+First, add this line to your application's _Gemfile_...
 
 ```ruby
-gem 'rubocop-perchwell'
+gem 'rubocop-perchwell', git: 'https://github.com/strikefromspace/rubocop-perchwell', branch: 'main'
 ```
 
-And then execute:
+... and then execute `bundle` in the shell:
 
-    $ bundle install
+```shell
+bundle install
+```
 
-Or install it yourself as:
+Next, create the file _.rubocop.yml_ in your project root directory and add this content:
 
-    $ gem install rubocop-perchwell
+```yaml
+inherit_gem:
+  rubocop-perchwell: .rubocop.yml
+```
+
+Rubocop configurations added via `inherit_gem` are prepended to the `inherit_from` directive. `inherit_gem` configurations are loaded first, followed by `inherit_from` (overriding the configurations from the gems). The remaining directives in the configuration file supersede any of the inherited configurations. (This means the configurations inherited from one or more gems have the lowest precedence of inheritance.)
 
 ## Usage
 
-TODO: Write usage instructions here
+To find and fix _Rubocop_ violations in your code, run `rubocop -A` in your shell:
+
+```shell
+rubocop -A
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`.
+
+To release a new version of this gem, update the version number in `version.rb` and run `bundle exec rake release`
+to create a _git_ tag for the version and push all commits and tags to origin.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rubocop-perchwell. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rubocop-perchwell/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/strikefromspace/rubocop-perchwell.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Rubocop::Perchwell project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rubocop-perchwell/blob/master/CODE_OF_CONDUCT.md).

@@ -1,12 +1,12 @@
 PATH
   remote: .
   specs:
-    rubocop-perchwell (0.0.1)
+    rubocop-perchwell (0.0.2)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.6)
+    activesupport (6.1.6.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
