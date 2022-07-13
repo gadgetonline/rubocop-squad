@@ -9,4 +9,4 @@ ruby '2.6.5'
 # Specify your gem's dependencies in rubocop-perchwell.gemspec
 gemspec
 
-gem 'rake', '~> 12.0'
+gem 'rake', '~> 13.0'
