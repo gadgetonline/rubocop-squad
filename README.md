@@ -1,14 +1,25 @@
 # The rubocop-perchwell Gem
 
-The `rubocop-perchwell` gem provides a baseline _Rubocop_ configuration for
-all Ruby development at Perchwell. It defines rules in its _.rubocop.yml_ and
+The `rubocop-perchwell` gem provides a standard, baseline _Rubocop_ configuration for
+all Ruby development at Perchwell. It defines a set of rules in its _.rubocop.yml_ and
 wraps its dependencies, other Rubocop gems, into a single package.
 
+`rubocop-perchwell` contains these cops:
+* `rubocop-faker`
+* `rubocop-ordered_methods`
+* `rubocop-performance`
+* `rubocop-rails`
+* `rubocop-rake`
+* `rubocop-rspec`
+* `rubocop-thread_safety`
+
+You can review the baseline configuration in this gem's [_.rubocop.yml_ file](https://github.com/RivingtonHoldings/rubocop-perchwell/blob/main/.rubocop.yml).
 
 ## Installation
 
-Installation in any Ruby project is a snap. You can add the `rubocop-perchwell` Rubocop configuration
-and its tools with three lines of code.
+Installation in any Ruby project is a snap. You can add
+the `rubocop-perchwell` Rubocop configuration and its tools with
+three lines of code.
 
 First, add this line to your application's _Gemfile_...
 

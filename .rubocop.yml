@@ -19,6 +19,7 @@ AllCops:
     - 'node_modules/**/*'
     - 'vendor/**/*'
   NewCops: enable
+  SuggestExtensions: false
   TargetRubyVersion: 2.6.5
 
 Layout/ArgumentAlignment:

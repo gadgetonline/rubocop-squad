@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-perchwell (0.0.2)
+    rubocop-perchwell (0.0.3)
 
 GEM
   remote: https://rubygems.org/
