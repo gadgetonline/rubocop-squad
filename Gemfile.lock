@@ -1,7 +1,15 @@
 PATH
   remote: .
   specs:
-    rubocop-perchwell (0.0.5)
+    rubocop-perchwell (0.0.6)
+      rubocop
+      rubocop-faker
+      rubocop-ordered_methods
+      rubocop-performance
+      rubocop-rails
+      rubocop-rake
+      rubocop-rspec
+      rubocop-thread_safety
 
 GEM
   remote: https://rubygems.org/
@@ -69,15 +77,7 @@ PLATFORMS
 
 DEPENDENCIES
   rake (~> 13.0)
-  rubocop
-  rubocop-faker
-  rubocop-ordered_methods
   rubocop-perchwell!
-  rubocop-performance
-  rubocop-rails
-  rubocop-rake
-  rubocop-rspec
-  rubocop-thread_safety
 
 RUBY VERSION
    ruby 2.6.5p114

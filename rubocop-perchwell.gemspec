@@ -3,14 +3,14 @@
 require_relative 'lib/rubocop/perchwell/version'
 
 Gem::Specification.new do |spec|
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'rubocop-faker'
-  spec.add_development_dependency 'rubocop-ordered_methods'
-  spec.add_development_dependency 'rubocop-performance'
-  spec.add_development_dependency 'rubocop-rails'
-  spec.add_development_dependency 'rubocop-rake'
-  spec.add_development_dependency 'rubocop-rspec'
-  spec.add_development_dependency 'rubocop-thread_safety'
+  spec.add_dependency 'rubocop'
+  spec.add_dependency 'rubocop-faker'
+  spec.add_dependency 'rubocop-ordered_methods'
+  spec.add_dependency 'rubocop-performance'
+  spec.add_dependency 'rubocop-rails'
+  spec.add_dependency 'rubocop-rake'
+  spec.add_dependency 'rubocop-rspec'
+  spec.add_dependency 'rubocop-thread_safety'
 
   spec.authors     = ['Martin Streicher']
   spec.bindir      = 'exe'
