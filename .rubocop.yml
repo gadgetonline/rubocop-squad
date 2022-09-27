@@ -90,6 +90,12 @@ Layout/MultilineMethodCallBraceLayout:
   Enabled: true
   EnforcedStyle: new_line
 
+Layout/OrderedMethods:
+  Enabled: true
+  IgnoredMethods:
+    - initialize
+    - call
+
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
 
