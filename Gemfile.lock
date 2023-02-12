@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-perchwell (0.0.7)
+    rubocop-squad (0.0.7)
       rubocop
       rubocop-faker
       rubocop-ordered_methods
@@ -80,7 +80,7 @@ PLATFORMS
 
 DEPENDENCIES
   rake (~> 13.0)
-  rubocop-perchwell!
+  rubocop-squad!
 
 RUBY VERSION
    ruby 2.6.5p114

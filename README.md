@@ -1,10 +1,11 @@
-# The rubocop-perchwell Gem
+# rubocop-squad
 
-The `rubocop-perchwell` gem provides a standard, baseline _Rubocop_ configuration for
-all Ruby development at Perchwell. It defines a set of rules in its _.rubocop.yml_ and
+The `rubocop-squad` gem provides a robust _Rubocop_ configuration for
+Ruby development. It defines a set of rules in its _.rubocop.yml_ and
 wraps its dependencies, other Rubocop gems, into a single package.
 
-`rubocop-perchwell` contains these cops:
+`rubocop-squad` contains these cops:
+
 * `rubocop-faker`
 * `rubocop-ordered_methods`
 * `rubocop-performance`
@@ -13,18 +14,18 @@ wraps its dependencies, other Rubocop gems, into a single package.
 * `rubocop-rspec`
 * `rubocop-thread_safety`
 
-You can review the baseline configuration in this gem's [_.rubocop.yml_ file](https://github.com/RivingtonHoldings/rubocop-perchwell/blob/main/.rubocop.yml).
+You can review the baseline configuration in this gem's [_.rubocop.yml_ file](https://github.com/martinstreicher/rubocop-squad/blob/main/.rubocop.yml).
 
 ## Installation
 
 Installation in any Ruby project is a snap. You can add
-the `rubocop-perchwell` Rubocop configuration and its tools with
+the `rubocop-squad` Rubocop configuration and its tools with
 three lines of code.
 
 First, add this line to your application's _Gemfile_...
 
 ```ruby
-gem 'rubocop-perchwell', git: 'https://github.com/strikefromspace/rubocop-perchwell', branch: 'main'
+gem 'rubocop-squad', git: 'https://github.com/martinstreicher/rubocop-squad', branch: 'main'
 ```
 
 ... and then execute `bundle` in the shell:
@@ -37,10 +38,14 @@ Next, create the file _.rubocop.yml_ in your project root directory and add this
 
 ```yaml
 inherit_gem:
-  rubocop-perchwell: .rubocop.yml
+  rubocop-squad: .rubocop.yml
 ```
 
-Rubocop configurations added via `inherit_gem` are prepended to the `inherit_from` directive. `inherit_gem` configurations are loaded first, followed by `inherit_from` (overriding the configurations from the gems). The remaining directives in the configuration file supersede any of the inherited configurations. (This means the configurations inherited from one or more gems have the lowest precedence of inheritance.)
+Rubocop configurations added via `inherit_gem` are prepended to the `inherit_from`
+directive. `inherit_gem` configurations are loaded first, followed by `inherit_from`
+(overriding the configurations from the gems). The remaining directives in the
+configuration file supersede any of the inherited configurations. (This means the
+configurations inherited from one or more gems have the lowest precedence of inheritance.)
 
 ## Usage
 
@@ -61,9 +66,11 @@ to create a _git_ tag for the version and push all commits and tags to origin.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/strikefromspace/rubocop-perchwell.
+Bug reports and pull requests are welcome on GitHub
+at https://github.com/martinstreicher/rubocop-squad.
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of
+the [MIT License](https://opensource.org/licenses/MIT).
